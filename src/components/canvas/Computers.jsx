@@ -15,7 +15,11 @@ const Computers = () => {
       <spotLight 
       position={[-20, 50, 10]} 
       color="#915eff"
-
+      angle={0.12}
+      penumbra={1}
+      intensity={1}
+      castShadow
+      shadow-mapSize={1024}
        />
       <primitive
         object={computer.scene}
@@ -27,7 +31,7 @@ const Computers = () => {
   )
 }
 
-const ComputersCanvas = () =>{  
+const ComputersCanvas = () =>{
   return( 
     <Canvas
     frameloop='demand'
@@ -36,8 +40,7 @@ const ComputersCanvas = () =>{
     gl={{preserveDrawingBuffer: true}}
     >
 
-      {/* <Suspense fallback={<CanvasLoader/>}> */}
-      <Suspense >
+      <Suspense fallback={<CanvasLoader/>}>
         <OrbitControls 
         enableZoom={false}
         // maxPolarAngle={Math.PI / 2}
