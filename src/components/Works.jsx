@@ -7,7 +7,6 @@ import { projects } from "../constands";
 import { fadeIn, textVariant } from "../utils/motion";
 import { useState } from "react";
 
-// TODO change project details
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link }) =>{
 
