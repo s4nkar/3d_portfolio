@@ -11,8 +11,8 @@ const Earth = () => {
     <primitive 
       object={earth.scene}
       scale= {2.5}
-      position-y= {0}  
-      rotation-y= {0}
+      position-y= {0.1}
+      rotation-y= {.1}
     />
   )
 }
@@ -27,17 +27,17 @@ const EarthCanvas = () => {
       fov: 45,
       near: 0.1,
       far: 200,
-      position: [-4, 3, 6]
+      position: [-4, 3, 6],
      }}
     >
 
-      {/* <Suspense fallback={<CanvasLoader/>}>  */}
-      <Suspense > 
+      <Suspense fallback={<CanvasLoader/>}>
           <OrbitControls 
             autoRotate
             enableZoom={false}
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}
+            enablePan={false}
           /> 
           <Earth  />
       </Suspense>

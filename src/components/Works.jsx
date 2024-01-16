@@ -79,10 +79,11 @@ const Works = () => {
         Following projects showcases my skills and experience through
         real-world examples of my work. It reflects my ability 
         to solve complex problems, work with different technologies, and manage projects effectively.
-        <p 
+        <br />
+        <span 
         onClick={()=> window.open("https://github.com/sankar-666", "_blank") }
         className="text-[15px] text-green-500 cursor-pointer underline"
-        >Explore more projects here</p>
+        >Explore more projects here</span>
         </motion.p>
     </div>
 

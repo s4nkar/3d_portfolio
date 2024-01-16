@@ -6,7 +6,6 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, slideIn } from "../utils/motion";
 
-
 const Contact = () => {
 
   const formRef = useRef();
@@ -20,10 +19,49 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    
+
+    const { name, value } = e.target;
+    setForm({...form, [name]: value});  
+
   }
 
   const handleSubmit = (e) => {
+    
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs.send(
+        'service_hc5we6a', 
+        'template_zht2dsl', 
+        {
+          from_name: form.name,
+          to_name: "Sankar",
+          from_email: form.email,
+          to_email: "s4nkar.connect@gmail.com",
+          message: form.message,
+
+        },
+        'BsORalaLNeDLPo5TT'
+        ).then(()=>{
+
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible.");
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          })
+
+        },
+        (error) => {
+          setLoading(false);
+          console.log(error);
+          alert('Something went wrong!')
+        }
+        )
+        // .catch((err)=>{
+        //   console.log(err);
+        // })
 
   }
 
@@ -50,6 +88,7 @@ const Contact = () => {
                     name="name" 
                     value={form.name}
                     onChange={handleChange}
+                    required
                     placeholder="What's your name?"
                     className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white outline-none rounded-lg border-none font-medium"
                    />
@@ -61,6 +100,7 @@ const Contact = () => {
                     name="email" 
                     value={form.email}
                     onChange={handleChange}
+                    required
                     placeholder="What's your email?"
                     className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white outline-none rounded-lg border-none font-medium"
                    />
@@ -72,6 +112,7 @@ const Contact = () => {
                     name="message" 
                     value={form.message}
                     onChange={handleChange}
+                    required
                     placeholder="What do you want to say?"
                     className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white outline-none rounded-lg border-none font-medium"
                    />
