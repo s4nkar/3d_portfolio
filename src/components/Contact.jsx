@@ -41,10 +41,10 @@ const Contact = () => {
             <form 
             ref={formRef}
             onSubmit={handleSubmit}
-            className="mt-12 flex flex-col gap-8"
+            className="mt-4 flex flex-col gap-8"
             >
                 <label className="flex flex-col">
-                  <span className="text-white font-medium mb-4">your Name</span>
+                  <span className="text-white font-medium mb-2">your Name</span>
                   <input 
                     type="text" 
                     name="name" 
@@ -55,7 +55,7 @@ const Contact = () => {
                    />
                 </label>
                 <label className="flex flex-col">
-                  <span className="text-white font-medium mb-4">your Email</span>
+                  <span className="text-white font-medium mb-2">your Email</span>
                   <input 
                     type="email" 
                     name="email" 
@@ -66,9 +66,9 @@ const Contact = () => {
                    />
                 </label>
                 <label className="flex flex-col">
-                  <span className="text-white font-medium mb-4">your Message</span>
+                  <span className="text-white font-medium mb-2">your Message</span>
                   <textarea
-                    rows={7} 
+                    rows={4} 
                     name="message" 
                     value={form.message}
                     onChange={handleChange}
