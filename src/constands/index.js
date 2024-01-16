@@ -211,67 +211,67 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "Domain Prediction",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "In this project, I implemented an advanced domain prediction system by leveraging feature engineering techniques to enhance the dataset's information. To address class imbalance, I applied the Synthetic Minority Over-sampling Technique (SMOTE) to achieve a balanced target distribution. Employing state-of-the-art machine learning models, including K-Nearest Neighbors (KNN), Decision Tree, and Random Forest, I conducted a comprehensive analysis to predict domains effectively. Furthermore, optimization was carried out using Random Search to fine-tune model parameters, ensuring optimal performance and robust predictive capabilities.",
       tags: [
         {
-          name: "react",
+          name: "Python",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "ML",
           color: "green-text-gradient",
         },
         {
-          name: "tailwind",
+          name: "smote",
           color: "pink-text-gradient",
         },
       ],
       image: carrent,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/sankar-666/Domain-Prediction-with-3-Different-Models.git",
     },
     {
-      name: "Job IT",
+      name: "YouTube Clone",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "In this comprehensive YouTube clone project, I skillfully implemented a sophisticated platform using React.js and advanced CSS tools. The user interface is not only visually appealing but also highly functional, replicating key features of the original YouTube. To achieve optimal performance and a seamless user experience, I utilized state-of-the-art React.js libraries and incorporated innovative CSS techniques like for responsive design. This endeavor showcases my dedication to detail, ensuring that the clone is not just a surface-level imitation but a finely tuned application. The commitment to user satisfaction is evident in every aspect of the project.",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "restapi",
+          name: "rapidapi",
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "mui",
           color: "pink-text-gradient",
         },
       ],
       image: jobit,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/sankar-666/React---Youtube-clone.git",
     },
     {
-      name: "Trip Guide",
+      name: "Weapon Detection",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "In this forward-thinking weapon detection project, I crafted a sophisticated CCTV model employing advanced technologies like Convolutional Neural Networks (CNN), Haarcascade classifiers, and the powerful OpenCV library. The system boasts dual capabilities, excelling in both weapon and face detection. Through the adept application of cutting-edge computer vision techniques, I ensured the model's accuracy and efficiency in identifying potential threats. CNN was harnessed for intricate pattern recognition, while Haarcascade classifiers provided precision in face detection. The seamless integration resulted in a robust and comprehensive weapon detection system.",
       tags: [
         {
-          name: "nextjs",
+          name: "CNN",
           color: "blue-text-gradient",
         },
         {
-          name: "supabase",
+          name: "haarcascade",
           color: "green-text-gradient",
         },
         {
-          name: "css",
+          name: "opencv",
           color: "pink-text-gradient",
         },
       ],
       image: tripguide,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/sankar-666",
     },
   ];
   
