@@ -1,8 +1,8 @@
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { services } from "../constands";
 import { fadeIn, textVariant } from '../utils/motion';
+import { services } from "../constands";
 import { SectionWrapper } from "../hoc";
 
 

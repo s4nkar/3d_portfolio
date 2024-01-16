@@ -19,6 +19,20 @@
   display: block;
 }
 
+*::-webkit-scrollbar-track{
+  width:10px !important;
+}
+
+*::-webkit-scrollbar-thumb{
+  background-color: #1d1836 !important;
+  width:10px !important;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar{
+  width:8px !important;
+}
+
 .black-gradient {
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(

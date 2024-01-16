@@ -15,15 +15,22 @@ import {
     git,
     figma,
     docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
     carrent,
     jobit,
     tripguide,
     threejs,
     tree,
+    a_studio,
+    android,
+    bootstrap,
+    express,
+    flask, 
+    laravel,
+    mui,
+    npm,
+    php,
+    python,
+    sql,
   } from "../assets";
   
   export const navLinks = [
@@ -73,18 +80,18 @@ import {
       name: "JavaScript",
       icon: javascript,
     },
-    {
-      name: "TypeScript",
-      icon: typescript,
-    },
+    // {
+    //   name: "TypeScript",
+    //   icon: typescript,
+    // },
     {
       name: "React JS",
       icon: reactjs,
     },
-    {
-      name: "Redux Toolkit",
-      icon: redux,
-    },
+    // {
+    //   name: "Redux Toolkit",
+    //   icon: redux,
+    // },
     {
       name: "Tailwind CSS",
       icon: tailwind,
@@ -106,13 +113,18 @@ import {
       icon: git,
     },
     {
-      name: "figma",
-      icon: figma,
+      name: "android",
+      icon: android,
     },
     {
-      name: "docker",
-      icon: docker,
+      name: "php",
+      icon: php,
     },
+    {
+      name: "python",
+      icon: python,
+    },
+
   ];
   
   const experiences = [
