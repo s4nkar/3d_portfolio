@@ -1,6 +1,7 @@
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import leetcode from '../assets/leetcode.png'
 
 const Footer = () => {
   return (
@@ -24,6 +25,13 @@ const Footer = () => {
         className='p-1 bg-tertiary rounded-2xl cursor-pointer w-[50px] h-[50px]'
         >
             <GitHubIcon fontSize='large' />
+        </button>
+        
+        <button 
+        onClick={()=> window.open("https://leetcode.com/s4nkar/", "_blank")} 
+        className='p-1 bg-tertiary rounded-2xl cursor-pointer w-[50px] h-[50px] flex justify-center items-center'
+        >
+            <img className='w-6 h-6' src={leetcode} alt="LeetCode" />
         </button>
     </div>
   )

@@ -5,10 +5,14 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, slideIn } from "../utils/motion";
+import SweetAlert2 from 'react-sweetalert2';
+
 
 const Contact = () => {
 
   const formRef = useRef();
+  const [swalProps, setSwalProps] = useState({});
+
 
   const [form, setForm] = useState({
     name: "",
@@ -45,7 +49,11 @@ const Contact = () => {
         ).then(()=>{
 
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          setSwalProps({
+            show: true,
+            title: 'Thank you. I will get back to you as soon as possible.',
+            icon: 'success',
+        })
           setForm({
             name: "",
             email: "",
@@ -56,19 +64,20 @@ const Contact = () => {
         (error) => {
           setLoading(false);
           console.log(error);
-          alert('Something went wrong!')
+          setSwalProps({
+            show: true,
+            title: 'Something Went Wrong',
+            icon: 'error',
+        })
         }
         )
-        // .catch((err)=>{
-        //   console.log(err);
-        // })
-
   }
 
 
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
+      <SweetAlert2 {...swalProps} />
         <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"

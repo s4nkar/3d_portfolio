@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
 import { ComputersCanvas } from './canvas'
+import SweetAlert2 from 'react-sweetalert2';
 
 const Hero = () => {
+  const [swalProps, setSwalProps] = useState({});
+
+  useEffect(()=>{
+
+    setSwalProps({
+      show: true,
+      title: 'Attention',
+      text: 'Please Note: Certain advanced features may be unavailable on mobile devices. For full functionality, please access this site using a desktop or laptop computer.',
+      confirmButtonText: 'Continue',
+  })
+
+  },[])
+
   return (
     <section className='relative w-full h-screen mx-auto'>
+
+
       <div
       className={`
       ${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5
@@ -18,6 +34,7 @@ const Hero = () => {
           <div className='w-1  h-40 sm:h-80 violet-gradient'/>
         </div>
 
+      <SweetAlert2 {...swalProps} />
         <div>
           <h1
           className={`
@@ -26,7 +43,7 @@ const Hero = () => {
           `}
           >
             Hi, I'am &nbsp;
-            <span className='text-[#915eff]'> 
+            <span className='text-[#915eff]' > 
               Sankar
             </span>
           </h1>
